@@ -55,7 +55,7 @@ npm install
 
 **Configure Environment Variables:**
 Create a `.env` file in the root directory and add your API keys:
-```env
+
 NEWS_API_KEY=your_news_api_key_here
 EXCHANGE_RATE_KEY=your_exchange_rate_key_here
 
@@ -72,13 +72,13 @@ Access the application:
 Open your browser and navigate to `http://localhost:3000`.
 
 
-Design Decisions & Logic
+**Design Decisions & Logic**
 
-Server-Side Execution
+**Server-Side Execution**
 
 Following the assignment requirements, all API logic is handled in the **Backend**. This prevents "Cross-Origin Resource Sharing" (CORS) issues and protects sensitive API keys from being exposed to the client.
 
-API Chaining Sequence
+**API Chaining Sequence**
 
 The controller implements a logical dependency chain:
 Step A: Get User  Extract **Country Name**.
@@ -86,11 +86,11 @@ Step B: Use Country Name  Get **Currency Code** & Country info.
 Step C: Use Currency Code  Fetch **Exchange Rates**.
 Step D: Use Country Name  Fetch **News Headlines**.
 
-3. Error Handling
+**Error Handling**
 
 The application uses `try-catch` blocks to handle potential failures (e.g., an API being down or a country not found). It ensures the server remains stable and provides meaningful feedback to the frontend.
 
-4. Clean UI/UX
+**Clean UI/UX**
 
 The frontend uses a modern **Card-based layout**. Data is displayed in structured sections with labeled fields, ensuring high readability and a professional look.
 
