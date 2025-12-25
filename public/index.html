@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back End 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>User Generator</h1>
+        
+            <button id="fetchBtn">Generate User</button>
+        </header>
+
+        <main id="mainContent" class="hidden">
+            <section class="card profile-card">
+                <p>Profile</p>
+                <div class="card-header">
+                    <img id="userImg" src="" alt="Profile Picture">
+                    <h2 id="userName"></h2>
+                    <span id="userGender" class="badge"></span>
+                </div>
+                <div class="card-body">
+                    <div class="info-group">
+                        <label>Age:</label>
+                        <span id="userAge"></span>
+                    </div>
+                    <div class="info-group">
+                        <label>Address:</label>
+                        <span id="userAddress"></span>
+                    </div>
+                    <div class="info-group">
+                        <label>City:</label>
+                        <span id="userCity"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card country-card">
+                <p>Country</p>
+                <div class="card-header">
+                    <img id="countryFlag" src="" alt="Flag" class="flag-img">
+                    <h2 id="countryName"></h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Capital:</strong> <span id="countryCapital"></span></p>
+                    <p><strong>Languages:</strong> <span id="countryLangs"></span></p>
+                    <p><strong>Currency:</strong> <span id="countryCurrency"></span></p>
+                    
+                    <div class="exchange-rates">
+                        <h3>Exchange rate:</h3>
+                        <p id="rateUsd"></p>
+                        <p id="rateKzt"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news-section">
+                <h3>Latest News of Country:</h3>
+                <div id="newsGrid" class="news-grid">
+                    </div>
+            </section>
+        </main>
+
+        <div id="loader" class="hidden">Loading data from server...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
